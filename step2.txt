@@ -27,6 +27,6 @@ PRIMARY KEY (student_number)
 Creating Project Structure
 1.cd ~
 2. mkdir student_app
-3. mkdir -p WEB-INF/classes
+3. cd student_app
 4. mkdir -p WEB-INF/classes
 5. mkdir -p src/com/student
