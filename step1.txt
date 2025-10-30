@@ -1,0 +1,47 @@
+
+Step 1
+java —version
+sudo apt update
+sudo apt install openjdk-11-jdk
+
+python
+sudo apt update
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install python3.9 python3.9-venv python3.9-distutils -y
+
+cassandra
+install prerequisites
+sudo apt install apt-transport-https gnupg2 software-properties-common -y
+
+wget https://dlcdn.apache.org/cassandra/4.0.19/apache-cassandra-4.0.19-bin.tar.gz
+tar -xvzf apache-cassandra-4.0.19-bin.tar.gz
+
+rename
+mv ~/apache-cassandra-4.0.19 ~/cassandra
+
+update env variables in .bashrc
+nano ~/.bashrc
+
+# Cassandra Variables
+export CASSANDRA_HOME=$HOME/cassandra
+export PATH=$CASSANDRA_HOME/bin:$PATH
+
+/* if port is in use*/
+ps aux | grep cassandra
+sudo kill -9 7945
+
+python3.9 -m venv cassandra_env
+source cassandra_env/bin/activate
+
+needed for python-cassandra
+pip install six
+
+Safely run
+cassandra
+
+verify
+nodetool status
+
+step 3 tomcat
