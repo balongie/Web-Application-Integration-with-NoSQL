@@ -1,0 +1,43 @@
+Part 2
+DESCRIBE KEYSPACES;
+lalabas ay student_ks
+
+USE student_ks;part2
+
+lalabas ay 
+cqlsh:student_ks>
+
+DESCRIBE TABLES
+tebol
+
+
+mkdir student_app
+cd student_app
+mkdir -p WEB-INF/classes
+mkdir -p WEB-INF/lib
+mkdir -p WEB-INF/src/com/student
+
+
+touch index.jsp
+
+Necessary Dependencies
+
+Cassandra Driver 4.17
+https://repo1.maven.org/maven2/com/datastax/oss/java-driver-core/4.17.0/ wget 
+
+sl4j api 2.0.17
+https://mvnrepository.com/artifact/org.slf4j/slf4j-api/2.0.17
+
+
+sl4j simple 2.0.17
+https://mvnrepository.com/artifact/org.slf4j/slf4j-simple/2.0.17
+
+
+guava 32.1.2 (compatible with 4.0 Cassandra)
+https://mvnrepository.com/artifact/com.google.guava/guava/32.1.2-jre
+
+Move jar to /lib
+
+find all dependencies
+include blablabla (dadagdagan palang)
+
