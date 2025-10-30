@@ -1,0 +1,32 @@
+Directory
+1. cd cassandra
+2. python3.9 -m venv cenv
+3. source cenv/bin/activate
+4. python3.9 bin/cqlsh.py
+==================================================================================
+1.
+CREATE KEYSPACE student_ks
+WITH REPLICATION = {
+'class': 'SimpleStrategy',
+'replication_factor': 1
+};
+
+2.
+USE student_ks;
+
+3.
+CREATE TABLE STUDENTS(
+student_number INT,
+name TEXT,
+program TEXT,
+year INT,
+PRIMARY KEY (student_number)
+);
+
+==================================================================================
+Creating Project Structure
+1.cd ~
+2. mkdir student_app
+3. mkdir -p WEB-INF/classes
+4. mkdir -p WEB-INF/classes
+5. mkdir -p src/com/student
